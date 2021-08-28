@@ -8,10 +8,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cfg "github.com/tendermint/tendermint/config"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
+	cfg "github.com/zlyzol/tendermint-0.32.3/config"
+	sm "github.com/zlyzol/tendermint-0.32.3/state"
+	"github.com/zlyzol/tendermint-0.32.3/types"
 )
 
 func TestStoreLoadValidators(t *testing.T) {
@@ -29,7 +29,7 @@ func TestStoreLoadValidators(t *testing.T) {
 	// 2) LoadValidators loads validators using a checkpoint height
 
 	// TODO(melekes): REMOVE in 0.33 release
-	// https://github.com/tendermint/tendermint/issues/3543
+	// https://github.com/zlyzol/tendermint-0.32.3/issues/3543
 	// for releases prior to v0.31.4, it uses last height changed
 	valInfo := &sm.ValidatorsInfo{
 		LastHeightChanged: sm.ValSetCheckpointInterval,

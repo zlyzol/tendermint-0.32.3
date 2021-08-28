@@ -17,7 +17,7 @@ package crypto_test
 import (
 	"fmt"
 
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/zlyzol/tendermint-0.32.3/crypto"
 )
 
 func ExampleSha256() {

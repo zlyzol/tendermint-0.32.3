@@ -6,7 +6,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/tendermint/tendermint/crypto/tmhash"
+	"github.com/zlyzol/tendermint-0.32.3/crypto/tmhash"
 )
 
 const ProofOpSimpleValue = "simple:v"

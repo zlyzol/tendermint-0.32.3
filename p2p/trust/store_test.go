@@ -10,8 +10,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/tendermint/tendermint/libs/log"
 	dbm "github.com/tendermint/tm-db"
+	"github.com/zlyzol/tendermint-0.32.3/libs/log"
 )
 
 func TestTrustMetricStoreSaveLoad(t *testing.T) {

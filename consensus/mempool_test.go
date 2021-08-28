@@ -9,12 +9,12 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/tendermint/tendermint/abci/example/code"
-	abci "github.com/tendermint/tendermint/abci/types"
-	mempl "github.com/tendermint/tendermint/mempool"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
+	"github.com/zlyzol/tendermint-0.32.3/abci/example/code"
+	abci "github.com/zlyzol/tendermint-0.32.3/abci/types"
+	mempl "github.com/zlyzol/tendermint-0.32.3/mempool"
+	sm "github.com/zlyzol/tendermint-0.32.3/state"
+	"github.com/zlyzol/tendermint-0.32.3/types"
 )
 
 // for testing

@@ -2,7 +2,7 @@ package main
 
 import (
 	amino "github.com/tendermint/go-amino"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
+	ctypes "github.com/zlyzol/tendermint-0.32.3/rpc/core/types"
 )
 
 var cdc = amino.NewCodec()

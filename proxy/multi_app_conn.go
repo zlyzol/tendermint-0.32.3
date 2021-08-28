@@ -3,7 +3,7 @@ package proxy
 import (
 	"github.com/pkg/errors"
 
-	cmn "github.com/tendermint/tendermint/libs/common"
+	cmn "github.com/zlyzol/tendermint-0.32.3/libs/common"
 )
 
 //-----------------------------

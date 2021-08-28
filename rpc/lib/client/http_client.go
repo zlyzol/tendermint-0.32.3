@@ -16,8 +16,8 @@ import (
 
 	amino "github.com/tendermint/go-amino"
 
-	cmn "github.com/tendermint/tendermint/libs/common"
-	types "github.com/tendermint/tendermint/rpc/lib/types"
+	cmn "github.com/zlyzol/tendermint-0.32.3/libs/common"
+	types "github.com/zlyzol/tendermint-0.32.3/rpc/lib/types"
 )
 
 const (

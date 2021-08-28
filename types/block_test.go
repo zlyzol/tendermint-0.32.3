@@ -12,10 +12,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	cmn "github.com/tendermint/tendermint/libs/common"
-	"github.com/tendermint/tendermint/version"
+	"github.com/zlyzol/tendermint-0.32.3/crypto"
+	"github.com/zlyzol/tendermint-0.32.3/crypto/tmhash"
+	cmn "github.com/zlyzol/tendermint-0.32.3/libs/common"
+	"github.com/zlyzol/tendermint-0.32.3/version"
 )
 
 func TestMain(m *testing.M) {

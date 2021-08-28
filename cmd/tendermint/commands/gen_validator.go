@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/tendermint/tendermint/privval"
+	"github.com/zlyzol/tendermint-0.32.3/privval"
 )
 
 // GenValidatorCmd allows the generation of a keypair for a

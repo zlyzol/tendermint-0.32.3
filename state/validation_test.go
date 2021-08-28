@@ -5,14 +5,14 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/mock"
+	"github.com/zlyzol/tendermint-0.32.3/mock"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	"github.com/tendermint/tendermint/libs/log"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
+	"github.com/zlyzol/tendermint-0.32.3/crypto/ed25519"
+	"github.com/zlyzol/tendermint-0.32.3/crypto/tmhash"
+	"github.com/zlyzol/tendermint-0.32.3/libs/log"
+	sm "github.com/zlyzol/tendermint-0.32.3/state"
+	"github.com/zlyzol/tendermint-0.32.3/types"
+	tmtime "github.com/zlyzol/tendermint-0.32.3/types/time"
 )
 
 const validationTestsStopHeight int64 = 10

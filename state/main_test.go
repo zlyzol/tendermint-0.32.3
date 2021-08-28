@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/tendermint/tendermint/types"
+	"github.com/zlyzol/tendermint-0.32.3/types"
 )
 
 func TestMain(m *testing.M) {

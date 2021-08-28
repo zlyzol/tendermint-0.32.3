@@ -9,8 +9,8 @@ import (
 	"time"
 
 	metrics "github.com/rcrowley/go-metrics"
-	tmrpc "github.com/tendermint/tendermint/rpc/client"
-	"github.com/tendermint/tendermint/types"
+	tmrpc "github.com/zlyzol/tendermint-0.32.3/rpc/client"
+	"github.com/zlyzol/tendermint-0.32.3/types"
 )
 
 type statistics struct {

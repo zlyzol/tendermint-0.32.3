@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/zlyzol/tendermint-0.32.3/libs/log"
 )
 
 var (

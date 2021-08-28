@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/tendermint/tendermint/crypto/ed25519"
+	"github.com/zlyzol/tendermint-0.32.3/crypto/ed25519"
 )
 
 func TestNodeInfoValidate(t *testing.T) {

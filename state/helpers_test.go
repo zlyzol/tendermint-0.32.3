@@ -4,14 +4,14 @@ import (
 	"bytes"
 	"fmt"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/proxy"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
 	dbm "github.com/tendermint/tm-db"
+	abci "github.com/zlyzol/tendermint-0.32.3/abci/types"
+	"github.com/zlyzol/tendermint-0.32.3/crypto"
+	"github.com/zlyzol/tendermint-0.32.3/crypto/ed25519"
+	"github.com/zlyzol/tendermint-0.32.3/proxy"
+	sm "github.com/zlyzol/tendermint-0.32.3/state"
+	"github.com/zlyzol/tendermint-0.32.3/types"
+	tmtime "github.com/zlyzol/tendermint-0.32.3/types/time"
 )
 
 type paramsChangeTestCase struct {

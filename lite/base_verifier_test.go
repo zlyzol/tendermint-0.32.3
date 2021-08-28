@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	lerr "github.com/tendermint/tendermint/lite/errors"
-	"github.com/tendermint/tendermint/types"
+	lerr "github.com/zlyzol/tendermint-0.32.3/lite/errors"
+	"github.com/zlyzol/tendermint-0.32.3/types"
 )
 
 func TestBaseCert(t *testing.T) {

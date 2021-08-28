@@ -3,10 +3,10 @@ package proxy
 import (
 	"github.com/pkg/errors"
 
-	log "github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/lite"
-	lclient "github.com/tendermint/tendermint/lite/client"
 	dbm "github.com/tendermint/tm-db"
+	log "github.com/zlyzol/tendermint-0.32.3/libs/log"
+	"github.com/zlyzol/tendermint-0.32.3/lite"
+	lclient "github.com/zlyzol/tendermint-0.32.3/lite/client"
 )
 
 func NewVerifier(chainID, rootDir string, client lclient.SignStatusClient, logger log.Logger, cacheSize int) (*lite.DynamicVerifier, error) {

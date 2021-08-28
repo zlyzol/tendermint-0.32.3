@@ -1,9 +1,9 @@
 package core
 
 import (
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	rpctypes "github.com/tendermint/tendermint/rpc/lib/types"
-	"github.com/tendermint/tendermint/types"
+	ctypes "github.com/zlyzol/tendermint-0.32.3/rpc/core/types"
+	rpctypes "github.com/zlyzol/tendermint-0.32.3/rpc/lib/types"
+	"github.com/zlyzol/tendermint-0.32.3/types"
 )
 
 // Broadcast evidence of the misbehavior.

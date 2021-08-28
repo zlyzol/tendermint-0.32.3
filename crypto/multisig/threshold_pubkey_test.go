@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
+	"github.com/zlyzol/tendermint-0.32.3/crypto"
+	"github.com/zlyzol/tendermint-0.32.3/crypto/ed25519"
+	"github.com/zlyzol/tendermint-0.32.3/crypto/secp256k1"
 )
 
 // This tests multisig functionality, but it expects the first k signatures to be valid

@@ -3,7 +3,7 @@ package node
 import (
 	"time"
 
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/zlyzol/tendermint-0.32.3/crypto"
 )
 
 type NodeID struct {

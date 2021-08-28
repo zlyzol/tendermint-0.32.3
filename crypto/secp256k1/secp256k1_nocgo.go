@@ -7,7 +7,7 @@ import (
 
 	secp256k1 "github.com/btcsuite/btcd/btcec"
 
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/zlyzol/tendermint-0.32.3/crypto"
 )
 
 // used to reject malleable signatures

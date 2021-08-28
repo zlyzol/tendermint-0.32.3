@@ -6,15 +6,15 @@ import (
 
 	"github.com/pkg/errors"
 
-	cmn "github.com/tendermint/tendermint/libs/common"
-	"github.com/tendermint/tendermint/libs/log"
-	tmpubsub "github.com/tendermint/tendermint/libs/pubsub"
-	tmquery "github.com/tendermint/tendermint/libs/pubsub/query"
-	nm "github.com/tendermint/tendermint/node"
-	"github.com/tendermint/tendermint/rpc/core"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	rpctypes "github.com/tendermint/tendermint/rpc/lib/types"
-	"github.com/tendermint/tendermint/types"
+	cmn "github.com/zlyzol/tendermint-0.32.3/libs/common"
+	"github.com/zlyzol/tendermint-0.32.3/libs/log"
+	tmpubsub "github.com/zlyzol/tendermint-0.32.3/libs/pubsub"
+	tmquery "github.com/zlyzol/tendermint-0.32.3/libs/pubsub/query"
+	nm "github.com/zlyzol/tendermint-0.32.3/node"
+	"github.com/zlyzol/tendermint-0.32.3/rpc/core"
+	ctypes "github.com/zlyzol/tendermint-0.32.3/rpc/core/types"
+	rpctypes "github.com/zlyzol/tendermint-0.32.3/rpc/lib/types"
+	"github.com/zlyzol/tendermint-0.32.3/types"
 )
 
 /*

@@ -7,7 +7,7 @@ import (
 	"text/tabwriter"
 	"time"
 
-	monitor "github.com/tendermint/tendermint/tools/tm-monitor/monitor"
+	monitor "github.com/zlyzol/tendermint-0.32.3/tools/tm-monitor/monitor"
 )
 
 const (

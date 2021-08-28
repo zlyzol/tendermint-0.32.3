@@ -6,9 +6,9 @@ import (
 	"os"
 	"strings"
 
-	cmn "github.com/tendermint/tendermint/libs/common"
-	"github.com/tendermint/tendermint/libs/log"
-	monitor "github.com/tendermint/tendermint/tools/tm-monitor/monitor"
+	cmn "github.com/zlyzol/tendermint-0.32.3/libs/common"
+	"github.com/zlyzol/tendermint-0.32.3/libs/log"
+	monitor "github.com/zlyzol/tendermint-0.32.3/tools/tm-monitor/monitor"
 )
 
 var logger = log.NewNopLogger()

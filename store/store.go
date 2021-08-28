@@ -8,7 +8,7 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/types"
+	"github.com/zlyzol/tendermint-0.32.3/types"
 )
 
 /*

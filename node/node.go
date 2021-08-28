@@ -17,35 +17,35 @@ import (
 	"github.com/rs/cors"
 
 	amino "github.com/tendermint/go-amino"
-	abci "github.com/tendermint/tendermint/abci/types"
-	bcv0 "github.com/tendermint/tendermint/blockchain/v0"
-	bcv1 "github.com/tendermint/tendermint/blockchain/v1"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/consensus"
-	cs "github.com/tendermint/tendermint/consensus"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/evidence"
-	cmn "github.com/tendermint/tendermint/libs/common"
-	"github.com/tendermint/tendermint/libs/log"
-	tmpubsub "github.com/tendermint/tendermint/libs/pubsub"
-	mempl "github.com/tendermint/tendermint/mempool"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/p2p/pex"
-	"github.com/tendermint/tendermint/privval"
-	"github.com/tendermint/tendermint/proxy"
-	rpccore "github.com/tendermint/tendermint/rpc/core"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	grpccore "github.com/tendermint/tendermint/rpc/grpc"
-	rpcserver "github.com/tendermint/tendermint/rpc/lib/server"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/state/txindex"
-	"github.com/tendermint/tendermint/state/txindex/kv"
-	"github.com/tendermint/tendermint/state/txindex/null"
-	"github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
-	"github.com/tendermint/tendermint/version"
 	dbm "github.com/tendermint/tm-db"
+	abci "github.com/zlyzol/tendermint-0.32.3/abci/types"
+	bcv0 "github.com/zlyzol/tendermint-0.32.3/blockchain/v0"
+	bcv1 "github.com/zlyzol/tendermint-0.32.3/blockchain/v1"
+	cfg "github.com/zlyzol/tendermint-0.32.3/config"
+	"github.com/zlyzol/tendermint-0.32.3/consensus"
+	cs "github.com/zlyzol/tendermint-0.32.3/consensus"
+	"github.com/zlyzol/tendermint-0.32.3/crypto"
+	"github.com/zlyzol/tendermint-0.32.3/evidence"
+	cmn "github.com/zlyzol/tendermint-0.32.3/libs/common"
+	"github.com/zlyzol/tendermint-0.32.3/libs/log"
+	tmpubsub "github.com/zlyzol/tendermint-0.32.3/libs/pubsub"
+	mempl "github.com/zlyzol/tendermint-0.32.3/mempool"
+	"github.com/zlyzol/tendermint-0.32.3/p2p"
+	"github.com/zlyzol/tendermint-0.32.3/p2p/pex"
+	"github.com/zlyzol/tendermint-0.32.3/privval"
+	"github.com/zlyzol/tendermint-0.32.3/proxy"
+	rpccore "github.com/zlyzol/tendermint-0.32.3/rpc/core"
+	ctypes "github.com/zlyzol/tendermint-0.32.3/rpc/core/types"
+	grpccore "github.com/zlyzol/tendermint-0.32.3/rpc/grpc"
+	rpcserver "github.com/zlyzol/tendermint-0.32.3/rpc/lib/server"
+	sm "github.com/zlyzol/tendermint-0.32.3/state"
+	"github.com/zlyzol/tendermint-0.32.3/state/txindex"
+	"github.com/zlyzol/tendermint-0.32.3/state/txindex/kv"
+	"github.com/zlyzol/tendermint-0.32.3/state/txindex/null"
+	"github.com/zlyzol/tendermint-0.32.3/store"
+	"github.com/zlyzol/tendermint-0.32.3/types"
+	tmtime "github.com/zlyzol/tendermint-0.32.3/types/time"
+	"github.com/zlyzol/tendermint-0.32.3/version"
 )
 
 //------------------------------------------------------------------------------
@@ -526,7 +526,7 @@ func createPEXReactorAndAddToSwitch(addrBook pex.AddrBook, config *cfg.Config,
 			// blocks assuming 10s blocks ~ 28 hours.
 			// TODO (melekes): make it dynamic based on the actual block latencies
 			// from the live network.
-			// https://github.com/tendermint/tendermint/issues/3523
+			// https://github.com/zlyzol/tendermint-0.32.3/issues/3523
 			SeedDisconnectWaitPeriod: 28 * time.Hour,
 		})
 	pexReactor.SetLogger(logger.With("module", "pex"))
@@ -600,7 +600,7 @@ func NewNode(config *cfg.Config,
 
 	pubKey := privValidator.GetPubKey()
 	if pubKey == nil {
-		// TODO: GetPubKey should return errors - https://github.com/tendermint/tendermint/issues/3602
+		// TODO: GetPubKey should return errors - https://github.com/zlyzol/tendermint-0.32.3/issues/3602
 		return nil, errors.New("could not retrieve public key from private validator")
 	}
 
@@ -864,7 +864,7 @@ func (n *Node) startRPC() ([]net.Listener, error) {
 	config.MaxOpenConnections = n.config.RPC.MaxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/tendermint/tendermint/issues/3435
+	// See https://github.com/zlyzol/tendermint-0.32.3/issues/3435
 	if config.WriteTimeout <= n.config.RPC.TimeoutBroadcastTxCommit {
 		config.WriteTimeout = n.config.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}

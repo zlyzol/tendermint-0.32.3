@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/zlyzol/tendermint-0.32.3/abci/types"
 )
 
 var (

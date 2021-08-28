@@ -3,9 +3,9 @@ package null
 import (
 	"errors"
 
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	"github.com/tendermint/tendermint/state/txindex"
-	"github.com/tendermint/tendermint/types"
+	"github.com/zlyzol/tendermint-0.32.3/libs/pubsub/query"
+	"github.com/zlyzol/tendermint-0.32.3/state/txindex"
+	"github.com/zlyzol/tendermint-0.32.3/types"
 )
 
 var _ txindex.TxIndexer = (*TxIndex)(nil)

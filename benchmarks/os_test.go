@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	cmn "github.com/tendermint/tendermint/libs/common"
+	cmn "github.com/zlyzol/tendermint-0.32.3/libs/common"
 )
 
 func BenchmarkFileWrite(b *testing.B) {

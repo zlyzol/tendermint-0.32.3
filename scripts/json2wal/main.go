@@ -15,8 +15,8 @@ import (
 	"strings"
 
 	amino "github.com/tendermint/go-amino"
-	cs "github.com/tendermint/tendermint/consensus"
-	"github.com/tendermint/tendermint/types"
+	cs "github.com/zlyzol/tendermint-0.32.3/consensus"
+	"github.com/zlyzol/tendermint-0.32.3/types"
 )
 
 var cdc = amino.NewCodec()

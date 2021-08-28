@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/zlyzol/tendermint-0.32.3/abci/types"
 )
 
 func TestABCIResults(t *testing.T) {

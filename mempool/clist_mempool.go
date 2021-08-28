@@ -11,14 +11,14 @@ import (
 
 	"github.com/pkg/errors"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	cfg "github.com/tendermint/tendermint/config"
-	auto "github.com/tendermint/tendermint/libs/autofile"
-	"github.com/tendermint/tendermint/libs/clist"
-	cmn "github.com/tendermint/tendermint/libs/common"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/proxy"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/zlyzol/tendermint-0.32.3/abci/types"
+	cfg "github.com/zlyzol/tendermint-0.32.3/config"
+	auto "github.com/zlyzol/tendermint-0.32.3/libs/autofile"
+	"github.com/zlyzol/tendermint-0.32.3/libs/clist"
+	cmn "github.com/zlyzol/tendermint-0.32.3/libs/common"
+	"github.com/zlyzol/tendermint-0.32.3/libs/log"
+	"github.com/zlyzol/tendermint-0.32.3/proxy"
+	"github.com/zlyzol/tendermint-0.32.3/types"
 )
 
 //--------------------------------------------------------------------------------
@@ -553,7 +553,7 @@ func (mem *CListMempool) Update(
 		//   101 -> 102
 		// Mempool after:
 		//   100
-		// https://github.com/tendermint/tendermint/issues/3322.
+		// https://github.com/zlyzol/tendermint-0.32.3/issues/3322.
 		if e, ok := mem.txsMap.Load(txKey(tx)); ok {
 			mem.removeTx(tx, e.(*clist.CElement), false)
 		}

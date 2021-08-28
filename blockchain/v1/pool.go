@@ -3,9 +3,9 @@ package v1
 import (
 	"sort"
 
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/types"
+	"github.com/zlyzol/tendermint-0.32.3/libs/log"
+	"github.com/zlyzol/tendermint-0.32.3/p2p"
+	"github.com/zlyzol/tendermint-0.32.3/types"
 )
 
 // BlockPool keeps track of the fast sync peers, block requests and block responses.

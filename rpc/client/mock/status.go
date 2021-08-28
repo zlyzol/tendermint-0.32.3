@@ -1,8 +1,8 @@
 package mock
 
 import (
-	"github.com/tendermint/tendermint/rpc/client"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
+	"github.com/zlyzol/tendermint-0.32.3/rpc/client"
+	ctypes "github.com/zlyzol/tendermint-0.32.3/rpc/core/types"
 )
 
 // StatusMock returns the result specified by the Call
