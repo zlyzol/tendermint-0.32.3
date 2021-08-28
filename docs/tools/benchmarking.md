@@ -2,7 +2,7 @@
 
 Tendermint blockchain benchmarking tool:
 
-- [https://github.com/tendermint/tendermint/tree/master/tools/tm-bench](https://github.com/tendermint/tendermint/tree/master/tools/tm-bench)
+- [https://github.com/zlyzol/tendermint-0.32.3/tree/master/tools/tm-bench](https://github.com/zlyzol/tendermint-0.32.3/tree/master/tools/tm-bench)
 
 For example, the following:
 

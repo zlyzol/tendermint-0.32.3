@@ -16,7 +16,7 @@ read -p "==> Push 3 docker images with the following tags (latest, $TAG, $TAG_NO
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-	docker push "tendermint/tendermint:latest"
-	docker push "tendermint/tendermint:$TAG"
-	docker push "tendermint/tendermint:$TAG_NO_PATCH"
+	docker push "zlyzol/tendermint-0.32.3:latest"
+	docker push "zlyzol/tendermint-0.32.3:$TAG"
+	docker push "zlyzol/tendermint-0.32.3:$TAG_NO_PATCH"
 fi

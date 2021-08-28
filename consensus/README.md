@@ -1,1 +1,1 @@
-See the [consensus spec](https://github.com/tendermint/tendermint/tree/master/docs/spec/consensus) and the [reactor consensus spec](https://github.com/tendermint/tendermint/tree/master/docs/spec/reactors/consensus) for more information.
+See the [consensus spec](https://github.com/zlyzol/tendermint-0.32.3/tree/master/docs/spec/consensus) and the [reactor consensus spec](https://github.com/zlyzol/tendermint-0.32.3/tree/master/docs/spec/reactors/consensus) for more information.

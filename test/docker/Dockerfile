@@ -9,7 +9,7 @@ RUN apt-get update && \
   jq bsdmainutils vim-common psmisc netcat curl
 
 # Setup tendermint repo
-ENV REPO $GOPATH/src/github.com/tendermint/tendermint
+ENV REPO $GOPATH/src/github.com/zlyzol/tendermint-0.32.3
 ENV GOBIN $GOPATH/bin
 WORKDIR $REPO
 

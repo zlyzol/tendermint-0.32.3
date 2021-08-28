@@ -4,7 +4,7 @@ This document specifies the Proposer Selection Procedure that is used in Tenderm
 As Tendermint is “leader-based protocol”, the proposer selection is critical for its correct functioning.
 
 At a given block height, the proposer selection algorithm runs with the same validator set at each round .
-Between heights, an updated validator set may be specified by the application as part of the ABCIResponses' EndBlock. 
+Between heights, an updated validator set may be specified by the application as part of the ABCIResponses' EndBlock.
 
 ## Requirements for Proposer Selection
 
@@ -18,14 +18,14 @@ Given a validator set `V`, and two honest validators `p` and `q`, for each heigh
 
 where `proposer_p(h,r)` is the proposer returned by the Proposer Selection Procedure at process `p`, at height `h` and round `r`.
 
-#### R2: Fairness 
+#### R2: Fairness
 Given a validator set with total voting power P and a sequence S of elections. In any sub-sequence of S with length C*P, a validator v must be elected as proposer P/VP(v) times, i.e. with frequency:
 
  f(v) ~ VP(v) / P
 
 where C is a tolerance factor for validator set changes with following values:
 - C == 1 if there are no validator set changes
-- C ~ k when there are validator changes 
+- C ~ k when there are validator changes
 
 *[this needs more work]*
 
@@ -35,7 +35,7 @@ At its core, the proposer selection procedure uses a weighted round-robin algori
 
 A model that gives a good intuition on how/ why the selection algorithm works and it is fair is that of a priority queue. The validators move ahead in this queue according to their voting power (the higher the voting power the faster a validator moves towards the head of the queue). When the algorithm runs the following happens:
 - all validators move "ahead" according to their powers: for each validator, increase the priority by the voting power
-- first in the queue becomes the proposer: select the validator with highest priority 
+- first in the queue becomes the proposer: select the validator with highest priority
 - move the proposer back in the queue: decrease the proposer's priority by the total voting power
 
 Notation:
@@ -63,12 +63,12 @@ Simple view at the Selection Algorithm:
 
 Consider the validator set:
 
-Validator | p1| p2 
+Validator | p1| p2
 ----------|---|---
 VP        | 1 | 3
 
 Assuming no validator changes, the following table shows the proposer priority computation over a few runs. Four runs of the selection procedure are shown, starting with the 5th the same values are computed.
-Each row shows the priority queue and the process place in it. The proposer is the closest to the head, the rightmost validator. As priorities are updated, the validators move right in the queue. The proposer moves left as its priority is reduced after election. 
+Each row shows the priority queue and the process place in it. The proposer is the closest to the head, the rightmost validator. As priorities are updated, the validators move right in the queue. The proposer moves left as its priority is reduced after election.
 
 |Priority   Run  | -2| -1| 0   |  1| 2   | 3 | 4 | 5 | Alg step
 |--------------- |---|---|---- |---|---- |---|---|---|--------
@@ -92,11 +92,11 @@ Between proposer selection runs the validator set may change. Some changes have 
 #### Voting Power Change
 Consider again the earlier example and assume that the voting power of p1 is changed to 4:
 
-Validator | p1| p2 
+Validator | p1| p2
 ----------|---| ---
 VP        | 4 | 3
 
-Let's also assume that before this change the proposer priorites were as shown in first row (last run). As it can be seen, the selection could run again, without changes, as before. 
+Let's also assume that before this change the proposer priorites were as shown in first row (last run). As it can be seen, the selection could run again, without changes, as before.
 
 |Priority   Run| -2 | -1 | 0    | 1   | 2   | Comment
 |--------------| ---|--- |------|---  |---  |--------
@@ -117,10 +117,10 @@ Validator | p1 | p2 | p3 |
 --------- |--- |--- |--- |
 VP        | 1  | 2  | 3  |
 
-Let's assume that after the last run the proposer priorities were as shown in first row with their sum being 0. After p2 is removed, at the end of next proposer selection run (penultimate row) the sum of priorities is -2 (minus the priority of the removed process). 
+Let's assume that after the last run the proposer priorities were as shown in first row with their sum being 0. After p2 is removed, at the end of next proposer selection run (penultimate row) the sum of priorities is -2 (minus the priority of the removed process).
 
 The procedure could continue without modifications. However, after a sufficiently large number of modifications in validator set, the priority values would migrate towards maximum or minimum allowed values causing truncations due to overflow detection.
-For this reason, the selection procedure adds another __new step__ that centers the current priority values such that the priority sum remains close to 0. 
+For this reason, the selection procedure adds another __new step__ that centers the current priority values such that the priority sum remains close to 0.
 
 |Priority   Run  |-3  | -2 | -1 | 0  | 1   | 2   | 4 |Comment
 |--------------- |--- | ---|--- |--- |---  |---  |---|--------
@@ -151,7 +151,7 @@ Observations:
 #### New Validator
 When a new validator is added, same problem as the one described for removal appears, the sum of priorities in the new set is not zero. This is fixed with the centering step introduced above.
 
-One other issue that needs to be addressed is the following. A validator V that has just been elected is moved to the end of the queue. If the validator set is large and/ or other validators have significantly higher power, V will have to wait many runs to be elected. If V removes and re-adds itself to the set, it would make a significant (albeit unfair) "jump" ahead in the queue. 
+One other issue that needs to be addressed is the following. A validator V that has just been elected is moved to the end of the queue. If the validator set is large and/ or other validators have significantly higher power, V will have to wait many runs to be elected. If V removes and re-adds itself to the set, it would make a significant (albeit unfair) "jump" ahead in the queue.
 
 In order to prevent this, when a new validator is added, its initial priority is set to:
 
@@ -159,7 +159,7 @@ In order to prevent this, when a new validator is added, its initial priority is
 
 where P is the total voting power of the set including V.
 
-Curent implementation uses the penalty factor of 1.125 because it provides a small punishment that is efficient to calculate. See [here](https://github.com/tendermint/tendermint/pull/2785#discussion_r235038971) for more details.
+Curent implementation uses the penalty factor of 1.125 because it provides a small punishment that is efficient to calculate. See [here](https://github.com/zlyzol/tendermint-0.32.3/pull/2785#discussion_r235038971) for more details.
 
 If we consider the validator set where p3 has just been added:
 
@@ -198,16 +198,16 @@ Then execute the following steps:
 
 1. Add a new validator p3:
 
-Validator | p1  | p2 | p3 
+Validator | p1  | p2 | p3
 ----------|-----|--- |----
-VP        | 80k | 10 | 10 
+VP        | 80k | 10 | 10
 
 2. Run selection once. The notation '..p'/'p..' means very small deviations compared to column priority.
 
 |Priority  Run | -90k..| -60k | -45k   | -15k| 0 | 45k | 75k  | 155k   | Comment
 |--------------|------ |----- |------- |---- |---|---- |----- |------- |---------
 | last run     |   p3  |      | p2     |     |   |  p1 |      |        | __added p3__
-| next run     
+| next run
 | *right_shift*|       |  p3  |        |  p2 |   |     |  p1  |        | A(i) -= avg,avg=-30k
 |              |       |  ..p3|        | ..p2|   |     |      |  p1    | A(i)+=VP(i)
 |              |       |  ..p3|        | ..p2|   |     | p1.. |        | A(p1)-=P, P=80k+20
@@ -218,12 +218,12 @@ VP        | 80k | 10 | 10
 Validator | p3   | p2  | Comment
 ----------|----- |---- |--------
 VP        | 10   | 10  |
-A         |-60k  |-15k |  
+A         |-60k  |-15k |
 A         |-22.5k|22.5k| __run selection__
 
 At this point, while the total voting power is 20, the distance between priorities is 45k. It will take 4500 runs for p3 to catch up with p2.
 
-In order to prevent these types of scenarios, the selection algorithm performs scaling of priorities such that the difference between min and max values is smaller than two times the total voting power. 
+In order to prevent these types of scenarios, the selection algorithm performs scaling of priorities such that the difference between min and max values is smaller than two times the total voting power.
 
 The modified selection algorithm is:
 
@@ -241,7 +241,7 @@ The modified selection algorithm is:
         avg = sum(A(i) for i in vset)/len(vset)
         for each validator i in vset:
             A(i) -= avg
-        
+
         // compute priorities and elect proposer
         for each validator i in vset:
             A(i) += VP(i)
@@ -251,7 +251,7 @@ The modified selection algorithm is:
 Observations:
 - With this modification, the maximum distance between priorites becomes 2 * P.
 
-Note also that even during steady state the priority range may increase beyond 2 * P. The scaling introduced here  helps to keep the range bounded. 
+Note also that even during steady state the priority range may increase beyond 2 * P. The scaling introduced here  helps to keep the range bounded.
 
 ### Wrinkles
 
@@ -265,16 +265,16 @@ The proposer priority is stored as an int64. The selection algorithm performs ad
     MinInt64  = -1 << 63
 
 ### Requirement Fulfillment Claims
-__[R1]__ 
+__[R1]__
 
-The proposer algorithm is deterministic giving consistent results across executions with same transactions and validator set modifications. 
+The proposer algorithm is deterministic giving consistent results across executions with same transactions and validator set modifications.
 [WIP - needs more detail]
 
-__[R2]__ 
+__[R2]__
 
 Given a set of processes with the total voting power P, during a sequence of elections of length P, the number of times any process is selected as proposer is equal to its voting power. The sequence of the P proposers then repeats. If we consider the validator set:
 
-Validator | p1| p2 
+Validator | p1| p2
 ----------|---|---
 VP        | 1 | 3
 

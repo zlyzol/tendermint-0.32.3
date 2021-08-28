@@ -8,7 +8,7 @@ module.exports = {
     lineNumbers: true
   },
   themeConfig: {
-    repo: "tendermint/tendermint",
+    repo: "zlyzol/tendermint-0.32.3",
     editLinks: true,
     docsDir: "docs",
     docsBranch: "develop",
