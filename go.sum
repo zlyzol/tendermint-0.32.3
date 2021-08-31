@@ -116,8 +116,8 @@ github.com/syndtr/goleveldb v1.0.1-0.20190318030020-c3a204f8e965 h1:1oFLiOyVl+W7
 github.com/syndtr/goleveldb v1.0.1-0.20190318030020-c3a204f8e965/go.mod h1:9OrXJhf154huy1nPWmuSrkgjPUtUNhA+Zmy+6AESzuA=
 github.com/tendermint/go-amino v0.14.1 h1:o2WudxNfdLNBwMyl2dqOJxiro5rfrEaU0Ugs6offJMk=
 github.com/tendermint/go-amino v0.14.1/go.mod h1:i/UKE5Uocn+argJJBb12qTZsCDBcAYMbR92AaJVmKso=
-github.com/zlyzol/tm-db-0.1.1 v1.0.0 h1:SIGx3amfVGjTrLmC16E+3CDLrF11VOkY6aR9jUAyDGw=
-github.com/zlyzol/tm-db-0.1.1 v1.0.0/go.mod h1:uD1JzRGbF2gMeoO95YAFZEPHkhx4dDbc2vlSd7o8Vv8=
+github.com/zlyzol/tm-db-0.1.1 v1.0.2 h1:QEFpzeZ897V1NnHoLW76/lOq9FsLk9Bj9xakzLqySXM=
+github.com/zlyzol/tm-db-0.1.1 v1.0.2/go.mod h1:uD1JzRGbF2gMeoO95YAFZEPHkhx4dDbc2vlSd7o8Vv8=
 go.etcd.io/bbolt v1.3.3 h1:MUGmc65QhB3pIlaQ5bB4LwqSj6GIonVJXpZiaKNyaKk=
 go.etcd.io/bbolt v1.3.3/go.mod h1:IbVyRI1SCnLcuJnV2u8VeU0CEYM7e686BmAb1XKL+uU=
 golang.org/x/crypto v0.0.0-20170930174604-9419663f5a44/go.mod h1:6SG95UA2DQfeDnfUPMdvaQW0Q7yPrPDi9nlGo2tz2b4=
