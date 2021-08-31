@@ -12,8 +12,8 @@ import (
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	db "github.com/tendermint/tm-db"
-	dbm "github.com/tendermint/tm-db"
+	db "github.com/zlyzol/tm-db-0.1.1"
+	dbm "github.com/zlyzol/tm-db-0.1.1"
 
 	cfg "github.com/zlyzol/tendermint-0.32.3/config"
 	"github.com/zlyzol/tendermint-0.32.3/libs/log"

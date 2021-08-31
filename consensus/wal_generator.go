@@ -11,7 +11,6 @@ import (
 
 	"github.com/pkg/errors"
 
-	db "github.com/tendermint/tm-db"
 	"github.com/zlyzol/tendermint-0.32.3/abci/example/kvstore"
 	cfg "github.com/zlyzol/tendermint-0.32.3/config"
 	cmn "github.com/zlyzol/tendermint-0.32.3/libs/common"
@@ -22,6 +21,7 @@ import (
 	sm "github.com/zlyzol/tendermint-0.32.3/state"
 	"github.com/zlyzol/tendermint-0.32.3/store"
 	"github.com/zlyzol/tendermint-0.32.3/types"
+	db "github.com/zlyzol/tm-db-0.1.1"
 )
 
 // WALGenerateNBlocks generates a consensus WAL. It does this by spinning up a

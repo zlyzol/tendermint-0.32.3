@@ -12,7 +12,6 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	dbm "github.com/tendermint/tm-db"
 	"github.com/zlyzol/tendermint-0.32.3/abci/example/kvstore"
 	cfg "github.com/zlyzol/tendermint-0.32.3/config"
 	"github.com/zlyzol/tendermint-0.32.3/crypto/ed25519"
@@ -28,6 +27,7 @@ import (
 	"github.com/zlyzol/tendermint-0.32.3/types"
 	tmtime "github.com/zlyzol/tendermint-0.32.3/types/time"
 	"github.com/zlyzol/tendermint-0.32.3/version"
+	dbm "github.com/zlyzol/tm-db-0.1.1"
 )
 
 func TestNodeStartStop(t *testing.T) {

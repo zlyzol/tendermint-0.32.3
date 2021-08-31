@@ -40,7 +40,7 @@ program](https://hackerone.com/tendermint).
 ### BREAKING CHANGES:
 
 - Go API
-  - [libs] [\#3811](https://github.com/zlyzol/tendermint-0.32.3/issues/3811) Remove `db` from libs in favor of `https://github.com/tendermint/tm-db`
+  - [libs] [\#3811](https://github.com/zlyzol/tendermint-0.32.3/issues/3811) Remove `db` from libs in favor of `https://github.com/zlyzol/tm-db-0.1.1`
 
 ### FEATURES:
 

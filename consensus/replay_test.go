@@ -17,7 +17,6 @@ import (
 
 	"sort"
 
-	dbm "github.com/tendermint/tm-db"
 	"github.com/zlyzol/tendermint-0.32.3/abci/example/kvstore"
 	abci "github.com/zlyzol/tendermint-0.32.3/abci/types"
 	cfg "github.com/zlyzol/tendermint-0.32.3/config"
@@ -30,6 +29,7 @@ import (
 	sm "github.com/zlyzol/tendermint-0.32.3/state"
 	"github.com/zlyzol/tendermint-0.32.3/types"
 	"github.com/zlyzol/tendermint-0.32.3/version"
+	dbm "github.com/zlyzol/tm-db-0.1.1"
 )
 
 func TestMain(m *testing.M) {

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"sync"
 
-	dbm "github.com/tendermint/tm-db"
 	clist "github.com/zlyzol/tendermint-0.32.3/libs/clist"
 	"github.com/zlyzol/tendermint-0.32.3/libs/log"
+	dbm "github.com/zlyzol/tm-db-0.1.1"
 
 	sm "github.com/zlyzol/tendermint-0.32.3/state"
 	"github.com/zlyzol/tendermint-0.32.3/types"

@@ -16,7 +16,6 @@ import (
 
 	"path"
 
-	dbm "github.com/tendermint/tm-db"
 	abcicli "github.com/zlyzol/tendermint-0.32.3/abci/client"
 	"github.com/zlyzol/tendermint-0.32.3/abci/example/counter"
 	"github.com/zlyzol/tendermint-0.32.3/abci/example/kvstore"
@@ -33,6 +32,7 @@ import (
 	"github.com/zlyzol/tendermint-0.32.3/store"
 	"github.com/zlyzol/tendermint-0.32.3/types"
 	tmtime "github.com/zlyzol/tendermint-0.32.3/types/time"
+	dbm "github.com/zlyzol/tm-db-0.1.1"
 )
 
 const (

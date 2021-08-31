@@ -14,7 +14,6 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	dbm "github.com/tendermint/tm-db"
 	abcicli "github.com/zlyzol/tendermint-0.32.3/abci/client"
 	"github.com/zlyzol/tendermint-0.32.3/abci/example/kvstore"
 	abci "github.com/zlyzol/tendermint-0.32.3/abci/types"
@@ -28,6 +27,7 @@ import (
 	sm "github.com/zlyzol/tendermint-0.32.3/state"
 	"github.com/zlyzol/tendermint-0.32.3/store"
 	"github.com/zlyzol/tendermint-0.32.3/types"
+	dbm "github.com/zlyzol/tm-db-0.1.1"
 )
 
 //----------------------------------------------

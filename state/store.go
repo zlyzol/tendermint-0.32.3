@@ -3,10 +3,10 @@ package state
 import (
 	"fmt"
 
-	dbm "github.com/tendermint/tm-db"
 	abci "github.com/zlyzol/tendermint-0.32.3/abci/types"
 	cmn "github.com/zlyzol/tendermint-0.32.3/libs/common"
 	"github.com/zlyzol/tendermint-0.32.3/types"
+	dbm "github.com/zlyzol/tm-db-0.1.1"
 )
 
 const (

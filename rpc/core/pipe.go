@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"time"
 
-	dbm "github.com/tendermint/tm-db"
 	cfg "github.com/zlyzol/tendermint-0.32.3/config"
 	"github.com/zlyzol/tendermint-0.32.3/consensus"
 	"github.com/zlyzol/tendermint-0.32.3/crypto"
@@ -15,6 +14,7 @@ import (
 	sm "github.com/zlyzol/tendermint-0.32.3/state"
 	"github.com/zlyzol/tendermint-0.32.3/state/txindex"
 	"github.com/zlyzol/tendermint-0.32.3/types"
+	dbm "github.com/zlyzol/tm-db-0.1.1"
 )
 
 const (

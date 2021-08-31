@@ -10,7 +10,6 @@ import (
 
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
-	dbm "github.com/tendermint/tm-db"
 	abci "github.com/zlyzol/tendermint-0.32.3/abci/types"
 	cfg "github.com/zlyzol/tendermint-0.32.3/config"
 	"github.com/zlyzol/tendermint-0.32.3/libs/log"
@@ -21,6 +20,7 @@ import (
 	"github.com/zlyzol/tendermint-0.32.3/store"
 	"github.com/zlyzol/tendermint-0.32.3/types"
 	tmtime "github.com/zlyzol/tendermint-0.32.3/types/time"
+	dbm "github.com/zlyzol/tm-db-0.1.1"
 )
 
 var config *cfg.Config

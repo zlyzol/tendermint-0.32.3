@@ -7,12 +7,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	db "github.com/tendermint/tm-db"
 	abci "github.com/zlyzol/tendermint-0.32.3/abci/types"
 	"github.com/zlyzol/tendermint-0.32.3/libs/log"
 	"github.com/zlyzol/tendermint-0.32.3/state/txindex"
 	"github.com/zlyzol/tendermint-0.32.3/state/txindex/kv"
 	"github.com/zlyzol/tendermint-0.32.3/types"
+	db "github.com/zlyzol/tm-db-0.1.1"
 )
 
 func TestIndexerServiceIndexesBlocks(t *testing.T) {

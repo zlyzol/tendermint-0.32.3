@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	dbm "github.com/tendermint/tm-db"
 	cmn "github.com/zlyzol/tendermint-0.32.3/libs/common"
+	dbm "github.com/zlyzol/tm-db-0.1.1"
 )
 
 const defaultStorePeriodicSaveInterval = 1 * time.Minute

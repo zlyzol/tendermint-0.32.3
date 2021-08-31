@@ -6,11 +6,11 @@ import (
 	"strconv"
 
 	amino "github.com/tendermint/go-amino"
-	dbm "github.com/tendermint/tm-db"
 	cryptoAmino "github.com/zlyzol/tendermint-0.32.3/crypto/encoding/amino"
 	log "github.com/zlyzol/tendermint-0.32.3/libs/log"
 	lerr "github.com/zlyzol/tendermint-0.32.3/lite/errors"
 	"github.com/zlyzol/tendermint-0.32.3/types"
+	dbm "github.com/zlyzol/tm-db-0.1.1"
 )
 
 var _ PersistentProvider = (*DBProvider)(nil)

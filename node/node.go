@@ -17,7 +17,6 @@ import (
 	"github.com/rs/cors"
 
 	amino "github.com/tendermint/go-amino"
-	dbm "github.com/tendermint/tm-db"
 	abci "github.com/zlyzol/tendermint-0.32.3/abci/types"
 	bcv0 "github.com/zlyzol/tendermint-0.32.3/blockchain/v0"
 	bcv1 "github.com/zlyzol/tendermint-0.32.3/blockchain/v1"
@@ -46,6 +45,7 @@ import (
 	"github.com/zlyzol/tendermint-0.32.3/types"
 	tmtime "github.com/zlyzol/tendermint-0.32.3/types/time"
 	"github.com/zlyzol/tendermint-0.32.3/version"
+	dbm "github.com/zlyzol/tm-db-0.1.1"
 )
 
 //------------------------------------------------------------------------------
